@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</property>
+  <property name="hibernate.connection.username">DARIO_DB</property>
+  <property name="hibernate.connection.password">dario</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.default_schema">DARIO_DB</property>
+  <property name="show_sql">true</property>
+  <property name="format_sql">false</property>
+  <mapping class="it.dario.bean.User"/>
+  <mapping class="it.dario.bean.UserDetail"/>
+  <mapping class="it.dario.bean.Stock" />
+  <mapping class="it.dario.bean.StockDailyRecord" />
+  <mapping class="it.dario.bean.Supermarket" />
+  <mapping class="it.dario.bean.Prodotto" />
+</session-factory>
+</hibernate-configuration>
